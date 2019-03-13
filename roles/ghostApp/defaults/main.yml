@@ -1,0 +1,7 @@
+MYSQL_ROOT_PASSWORD: "ghost"
+MYSQL_CLIENT: "mysql"
+MYSQL_HOST: "mysql"
+MYSQL_USER: "root"
+MYSQL_PASSWORD: "ghost"
+MYSQL_DATABASE: "ghost"
+MYSQL_PORT: "3306"

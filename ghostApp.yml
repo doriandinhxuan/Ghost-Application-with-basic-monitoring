@@ -1,0 +1,11 @@
+- hosts: all
+  become: true
+  become_user: root
+
+  roles:
+    - ghostApp
+
+  tasks:
+    - name:
+      command: /home/vagrant/ghost/migrations-db.sh
+      run_once: True
