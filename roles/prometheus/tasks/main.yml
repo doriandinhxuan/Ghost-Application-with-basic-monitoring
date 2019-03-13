@@ -1,7 +1,7 @@
-# - name: Update system
-#   yum:
-#     name: '*'
-#     state:  latest
+
+#############################################################################
+###                              Prometheus Server                        ### 
+#############################################################################
 
 - name: Installation multiple packages
   yum:
@@ -36,11 +36,8 @@
     group: prometheus
     remote_src: yes
 
-- name: change name of directory 'prometheus'
+- name: Change name of directory 'prometheus'
   command: mv /opt/prometheus-1.7.1.linux-amd64 /opt/prometheus
-
-# - name: change access prometheus user
-#   command: sudo chown prometheus:prometheus /opt/prometheus-1.7.1.linux-amd64/ -R
 
 - name: Creating prometheus.service
   file:
@@ -48,7 +45,7 @@
     state: touch
     mode: 0775
   
-- name: add configuration to /etc/systemd/system/prometheus.service
+- name: Add configuration to /etc/systemd/system/prometheus.service
   blockinfile:
     dest: /etc/systemd/system/prometheus.service
     insertafter: EOF
@@ -96,7 +93,7 @@
     group: node_exporter
     remote_src: yes 
 
-- name: change name of directory 'node_exporter'
+- name: Change name of directory 'node_exporter'
   command: mv /opt/node_exporter-0.17.0.linux-amd64 /opt/node_exporter 
 
 - name: Creating node_exporter.service
@@ -105,7 +102,7 @@
     state: touch
     mode: 0775
 
-- name: add configuration to /etc/systemd/system/node_exporter.service
+- name: Add configuration to /etc/systemd/system/node_exporter.service
   blockinfile:
     dest: /etc/systemd/system/node_exporter.service
     insertafter: EOF
@@ -140,7 +137,3 @@
   with_items:
       - 'prometheus'
       - 'node_exporter'
-
-## 159  system dashbord
-
-## 179 docker containers dashbord

@@ -1,7 +1,7 @@
-# - name: Update system
-#   yum:
-#     name: '*'
-#     state:  latest
+
+#############################################################################
+###                                  Grafana                              ### 
+#############################################################################
 
 - name: Installation multiple packages
   yum:
@@ -38,7 +38,7 @@
     mode: 0640
     dest: "/etc/grafana/provisioning/dashboards/sample.yaml"
 
-- name: import custom dashbaords
+- name: Import custom dashbaords
   copy: 
     src: "{{ item }}"
     owner: root
@@ -78,7 +78,7 @@
     group: node_exporter
     remote_src: yes 
 
-- name: change name of directory 'node_exporter'
+- name: Change name of directory 'node_exporter'
   command: mv /opt/node_exporter-0.17.0.linux-amd64 /opt/node_exporter 
 
 - name: Creating node_exporter.service
@@ -87,7 +87,7 @@
     state: touch
     mode: 0775
 
-- name: add configuration to /etc/systemd/system/node_exporter.service
+- name: Add configuration to /etc/systemd/system/node_exporter.service
   blockinfile:
     dest: /etc/systemd/system/node_exporter.service
     insertafter: EOF

@@ -19,8 +19,8 @@
     "options": {
     "service": "Gmail",
     "auth": {
-    "user": "ropnysyf@gmail.com",
-    "pass": "SnBWHu70qgJkEaqz"
+    "user": "<your_mail@gmail.com>",
+    "pass": "<your_password>"
       }
     }
   },
