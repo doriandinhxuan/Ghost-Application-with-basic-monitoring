@@ -2,7 +2,7 @@
 
 - Automatic deployment of Dockerized Application with basic monitoring.
 - Automatically collected metrics from containers via Prometheus (exporters) and cAdvisor.
-- Visualization of metrics using Grafana platforms.
+- Visualization of metrics using Grafana platform.
 
 
 
