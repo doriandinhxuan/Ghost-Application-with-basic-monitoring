@@ -74,7 +74,6 @@ The assumption of the project is a collection of all metrics from the Machines a
 <br><br>
 ![alt text](images/diagram-ghost.png)
 
-***
 **Components:**
 
 
@@ -91,7 +90,6 @@ The assumption of the project is a collection of all metrics from the Machines a
 
 * **cAdvisor Interface** - [ 192.168.10.103:8080 ]
 
-***
 
 *Before you run* **vagrant up**
 
