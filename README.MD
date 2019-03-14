@@ -120,7 +120,7 @@ Now you can run **vagrant up**
       "host": "127.0.0.1",
       "user": "root",
       "password": "ghost",
-      "database": "ghost-db",
+      "database": "ghost",
       "port": 3306
     }
   },

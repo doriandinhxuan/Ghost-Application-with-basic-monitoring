@@ -28,7 +28,7 @@ services:
       database__connection__host: "mysql"
       database__connection__user: "root"
       database__connection__password: "ghost"
-      database__connection__database: "ghost-db"
+      database__connection__database: "ghost"
     links:
       - mysql
     depends_on: [mysql]
