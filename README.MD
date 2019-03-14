@@ -165,7 +165,7 @@ To automatic provision & deploy we are using ***ANSIBLE*** which is a radically 
 Below is a drawing showing System metrics and container metrics (grafana server - data from Prometheus : **192.168.10.101.3000** )
 
 
-***
+
 ![alt text](images/Grafana-1.png)
 
 ![alt text](images/Grafana-2.png)
