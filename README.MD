@@ -6,7 +6,7 @@
 
 
 
-**Used tools:** ***[Vargrant](https://www.vagrantup.com/docs/), [Ansible](https://docs.ansible.com/ansible/2.4/intro.html), [Docker](https://docs.docker.com), [Prometheus](https://prometheus.io/docs/introduction/overview/), [Grafana](http://docs.grafana.org), [cAdvisor](https://github.com/google/cadvisor), [Node_exporter](https://github.com/prometheus/node_exporter)***
+**Used tools:** ***[Vagrant](https://www.vagrantup.com/docs/), [Ansible](https://docs.ansible.com/ansible/2.4/intro.html), [Docker](https://docs.docker.com), [Prometheus](https://prometheus.io/docs/introduction/overview/), [Grafana](http://docs.grafana.org), [cAdvisor](https://github.com/google/cadvisor), [Node_exporter](https://github.com/prometheus/node_exporter)***
 
 ***
 
