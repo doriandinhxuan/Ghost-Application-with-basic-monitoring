@@ -70,8 +70,9 @@ The environment consists of 3 virtual machines:
 The assumption of the project is a collection of all metrics from the Machines and docker containers. 
 
 
-Infrastructure diagram: 
-![zdjecie diagramu](images/prometheus_environment.png)
+**Infrastructure diagram:**
+<br><br>
+![alt text](images/diagram-ghost.png)
 
 ***
 **Components:**
