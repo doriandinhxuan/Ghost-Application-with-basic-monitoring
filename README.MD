@@ -6,7 +6,7 @@
 
 
 
-**Used tools:** ***[Vagrant](https://www.vagrantup.com/docs/), [Ansible](https://docs.ansible.com/ansible/2.4/intro.html), [Docker](https://docs.docker.com), [Prometheus](https://prometheus.io/docs/introduction/overview/), [Grafana](http://docs.grafana.org), [cadvisor](https://github.com/google/cadvisor), [Node_exporter](https://github.com/prometheus/node_exporter)***
+**Used tools:** ***[Vagrant](https://www.vagrantup.com/docs/), [Virtual Box](https://www.virtualbox.org), [Ansible](https://docs.ansible.com/ansible/2.4/intro.html), [Docker](https://docs.docker.com), [Prometheus](https://prometheus.io/docs/introduction/overview/), [Grafana](http://docs.grafana.org), [cadvisor](https://github.com/google/cadvisor), [Node_exporter](https://github.com/prometheus/node_exporter)***
 
 ***
 
@@ -25,9 +25,9 @@ You must have installed:
 3. Ansible
 4. Mail account
 
-* Vagrant is a tool for building and managing virtual machine environments in a single workflow. With an easy-to-use workflow and focus on automation, Vagrant lowers development environment setup time, increases production parity, and makes the "works on my machine" excuse a relic of the past. https://www.vagrantup.com/
+* Vagrant is a tool for building and managing virtual machine environments in a single workflow. With an easy-to-use workflow and focus on automation, Vagrant lowers development environment setup time, increases production parity, and makes the "works on my machine" excuse a relic of the past.
   
-* VirtualBox is a powerful x86 and AMD64/Intel64 virtualization product for enterprise as well as home use. https://www.virtualbox.org/
+* VirtualBox is a powerful x86 and AMD64/Intel64 virtualization product for enterprise as well as home use. 
 
 * Ansible is an IT automation tool. It can configure systems, deploy software, and orchestrate more advanced IT tasks such as continuous deployments or zero downtime rolling updates.
 
