@@ -160,7 +160,6 @@ To automatic provision & deploy we are using ***ANSIBLE*** which is a radically 
 
 
 ***
-***
 
 
 **Example in practice:**
@@ -171,7 +170,6 @@ Below is a drawing showing System metrics and container metrics (grafana server 
 ***
 ![alt text](images/Grafana-1.png)
 
-***
 ![alt text](images/Grafana-2.png)
 ***
 
