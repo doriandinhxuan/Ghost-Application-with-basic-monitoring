@@ -36,11 +36,12 @@ You must have installed:
 **Instalation:**
 
 
-1. mkdir /*your_path*/*project01*; cd /*your_path*/*project01**
-2. git init
-3. git clone https://github.com/doriandinhxuan/Ghost-Application-with-basic-monitoring.git
-4. cd host-Application-with-basic-monitoring
-5. vagrant up 
+1. mkdir /*your_path*/*project01*
+2.  cd /*your_path*/*project01*
+3. git init
+4. git clone https://github.com/doriandinhxuan/Ghost-Application-with-basic-monitoring.git
+5. cd host-Application-with-basic-monitoring
+6. vagrant up 
 
 Access to Grafana Interface :
 
@@ -77,17 +78,17 @@ Infrastructure diagram:
 
 
 
-* **Grafana** - [ 192.168.100.101:3000 ]
+* **Grafana** - [ 192.168.10.101:3000 ]
 
 
 
-* **Prometheus** -[ 192.168.100.102:9090 ]
+* **Prometheus** -[ 192.168.10.102:9090 ]
 
 
-* **Ghost Blog** - [ 192.168.100.103 ]
+* **Ghost Blog** - [ 192.168.10.103 ]
   
 
-* **cAdvisor Interface** - [ 192.168.100.103:8080 ]
+* **cAdvisor Interface** - [ 192.168.10.103:8080 ]
 
 ***
 
@@ -163,7 +164,7 @@ To automatic provision & deploy we are using ***ANSIBLE*** which is a radically 
 
 **Example in practice:**
 
-Below is a drawing showing System metrics and container metrics (grafana server - data from Prometheus and cAdvisor : **192.168.100.101.3000** )
+Below is a drawing showing System metrics and container metrics (grafana server - data from Prometheus and cAdvisor : **192.168.10.101.3000** )
 
 
 ***
