@@ -6,7 +6,7 @@
 
 
 
-**Used tools:** ***[Vagrant](https://www.vagrantup.com/docs/), [Ansible](https://docs.ansible.com/ansible/2.4/intro.html), [Docker](https://docs.docker.com), [Prometheus](https://prometheus.io/docs/introduction/overview/), [Grafana](http://docs.grafana.org), [cAdvisor](https://github.com/google/cadvisor), [Node_exporter](https://github.com/prometheus/node_exporter)***
+**Used tools:** ***[Vagrant](https://www.vagrantup.com/docs/), [Ansible](https://docs.ansible.com/ansible/2.4/intro.html), [Docker](https://docs.docker.com), [Prometheus](https://prometheus.io/docs/introduction/overview/), [Grafana](http://docs.grafana.org), [cadvisor](https://github.com/google/cadvisor), [Node_exporter](https://github.com/prometheus/node_exporter)***
 
 ***
 
@@ -162,7 +162,7 @@ To automatic provision & deploy we are using ***ANSIBLE*** which is a radically 
 
 **Example in practice:**
 
-Below is a drawing showing System metrics and container metrics (grafana server - data from Prometheus and cAdvisor : **192.168.10.101.3000** )
+Below is a drawing showing System metrics and container metrics (grafana server - data from Prometheus : **192.168.10.101.3000** )
 
 
 ***
