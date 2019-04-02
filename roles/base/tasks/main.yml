@@ -1,0 +1,16 @@
+- name: "Install require packages"
+  yum:
+    name: "{{ packages }}"
+    state: latest
+    update_cache: true
+  vars:
+    packages:
+    - https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+    - git
+    - wget
+    - net-tools
+
+- name: install updates using yum
+  yum:
+    name: "*"
+    state: latest
