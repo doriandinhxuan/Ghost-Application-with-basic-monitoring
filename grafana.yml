@@ -9,4 +9,6 @@
   become_user: root
 
   roles:
+    - base
+    - google_authenticator
     - grafana

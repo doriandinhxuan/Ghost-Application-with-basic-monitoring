@@ -1,0 +1,70 @@
+- name: install updates using yum
+  yum:
+    name: google-authenticator
+    state: latest
+
+- name: "Configure /etc/pam.d/sshd"
+  become: true
+  lineinfile:
+    dest: /etc/pam.d/sshd
+    line: auth required pam_google_authenticator.so
+
+- name: "Configure /etc/pam.d/sshd"
+  become: true
+  replace:
+    path: /etc/pam.d/sshd
+    regexp: '^auth.*substack.*password-auth$'
+    replace: "#auth       substack     password-auth"
+
+- name: "Configure /etc/ssh/sshd_config"
+  lineinfile:
+    dest: /etc/ssh/sshd_config
+    regexp: "{{ item.regexp }}"
+    line: "{{ item.line }}"
+    owner: root
+    mode: 0644
+  with_items:
+    - { regexp: 'ChallengeResponseAuthentication no', line: '#ChallengeResponseAuthentication no' }
+    - { regexp: '^#ChallengeResponseAuthentication yes', line: 'ChallengeResponseAuthentication yes' }
+
+- name: "Configure /etc/ssh/sshd_config"
+  lineinfile:
+    dest: /etc/ssh/sshd_config
+    owner: root
+    group: root
+    mode: 0644
+    regexp: "{{ item.regexp }}"
+    line: "{{ item.line }}"
+  with_items:
+    - { regexp: 'AuthenticationMethods publickey,keyboard-interactive', line: 'AuthenticationMethods publickey,keyboard-interactive' }
+
+- name: Make sure that the user who can log in using 2FA exists
+  become: true
+  user:
+    name: "{{ user }}"
+    comment: User with enabled 2FA
+    state: present
+
+- name: "Update ~/.google_authenticator"
+  become: true
+  become_user: "{{ item }}"
+  template:
+    src: google_authenticator.j2
+    dest: "~/.google_authenticator"
+    owner: "{{ item }}"
+    mode: 0400
+  with_items:
+    - root
+    - "{{ user }}"
+
+- name: Add 2FA code to your phone.
+  debug:
+    msg: "{{ google_authenticator | b64decode }}"
+
+
+- name: "Restart ssh service"
+  become: true
+  service:
+    name: sshd
+    state: restarted
+    enabled: yes 

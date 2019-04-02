@@ -13,14 +13,14 @@ Vagrant.configure("2") do |config|
 
     vb.name = "grafana"
 
-    vb.customize ["modifyvm", :id, "--memory", "1024"]
+    vb.customize ["modifyvm", :id, "--memory", "2048"]
   
-    vb.customize ["modifyvm", :id, "--cpus", "1"]
+    vb.customize ["modifyvm", :id, "--cpus", "2"]
   
     end
   
     grafana.vm.network "private_network", ip: "192.168.10.101"
-  
+    # grafana.ssh.username = "vagrant"
     grafana.vm.hostname = "grafana"
   
     grafana.vm.provision "ansible" do |ansible|
